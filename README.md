@@ -12,7 +12,7 @@ Those sites have to be in metropolitan France (and Corsica) (if needed, minor ch
 It uses the E-Obs meteorological data: https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php#datafiles
 
 
-### ExtractinWind_speed.R
+### ExtractingWind_speed.R
 This script extracts the wind speed (in m.s-1) at sites for given nights at 18, 0 or 6 o'clock (minor changes can allow to transform this script for diurnal surveys).
 Those sites have to be in metropolitan France (and Corsica) (if needed, minor changes will allow to use this script for other sites throughout the word).
 /!\ The data used have a low spatial resolution (2°) but a high temporal one (every 6 hours).
