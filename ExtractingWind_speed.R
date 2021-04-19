@@ -104,7 +104,7 @@ extract_WindSpeed <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,y
 
   #Correspondance
   site_Nights$corresp_RNCEP <- site_RNCEP$coord[st_nearest_feature(sites_SHP,RNCEP_SHP)]
-  tableNightsSites$corresp_RNCEP <- site_Nights$corresp_RNCEP[match(tableNightsSites$site_point,site_Nights$site_point)]
+  tableNightsSites$corresp_RNCEP <- site_Nights$corresp_RNCEP[match(tableNightsSites[,which(colnames(tableNightsSites)==Col_ID)],site_Nights[,which(colnames(site_Nights)==Col_ID)])]
   
   ####III. Wind speed extraction####
   
