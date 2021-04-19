@@ -43,15 +43,6 @@
 
 extract_WindSpeed <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,year_end){
 
-  rm(list = ls())
-  Nights50 <- read.csv("C:/Users/Lea_Mariton/Documents/These/Article_a_lancer/Vigie_chiro_opening/CSV_Extraction_var/Nights50_Vars.csv")
-  tableNightsSites <- Nights50[c(1:200),]
-  str(tableNightsSites)
-  nbrPreviousDays <- 0
-  year_beg <- 2011
-  year_end <- 2016
-  Col_ID <- "autre"
-  
   colnames(tableNightsSites)[which(colnames(tableNightsSites)=="Nuit")] <- "Date"
   colnames(tableNightsSites)[which(colnames(tableNightsSites)=="latitude")] <- "Latitude"
   colnames(tableNightsSites)[which(colnames(tableNightsSites)=="longitude")] <- "Longitude"
