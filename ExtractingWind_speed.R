@@ -7,8 +7,8 @@
 # for the day studied (wind_night_18 for the wind speed at 18 o'clock, i.e beginning of night, wind_night_00
 # for the wind speed at midnight, wind_night_06 for the wind speed at 6 o'clock, i.e. end of the night)
 # and as many columns as the number of days before the survey specified in arguments x 3 
-# (e.g. wind speed of the day before at o'clock: wind_day_18_before1, wind speed two days before at 18 
-# o'clock: wind_day_18_before2, etc).
+# (e.g. wind speed of the day before at o'clock: wind_night_18_before1, wind speed two days before at 18 
+# o'clock: wind_night_18_before2, etc).
 #
 ##############################################################################################################
 #
