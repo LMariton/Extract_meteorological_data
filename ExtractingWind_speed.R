@@ -32,8 +32,8 @@
 #
 # Col_ID : column name of the table containing the site unique IDs (ex : "CODE_SITE")
 #
-# nbrPreviousDays : number of previous nights for which T° should be returned
-# (for example "3", to obtain the temperature for the survey night but for also the three previous ones)
+# nbrPreviousDays : number of previous nights for which wind speed should be returned
+# (for example "3", to obtain the wind speed for the survey night but for also the three previous ones)
 #
 # year_beg : year when the surveys began
 #
@@ -42,12 +42,7 @@
 ##############################################################################################################
 
 extract_WindSpeed <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,year_end){
-
-  colnames(tableNightsSites)[which(colnames(tableNightsSites)=="Nuit")] <- "Date"
-  colnames(tableNightsSites)[which(colnames(tableNightsSites)=="latitude")] <- "Latitude"
-  colnames(tableNightsSites)[which(colnames(tableNightsSites)=="longitude")] <- "Longitude"
-  colnames(tableNightsSites)[which(colnames(tableNightsSites)=="site_point")] <- "autre"
-  
+ 
   #Install and open required packages
   load <- function(pkg){
     new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
