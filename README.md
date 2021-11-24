@@ -7,7 +7,7 @@ Those sites have to be in metropolitan France (and Corsica) (if needed, minor ch
 It uses the E-Obs meteorological data: https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php#datafiles
 
 ### ExtractingPrecipitations.R
-This script extracts the precipitations sum (in mm) at sites for given dates.
+This script extracts the sum of precipitations (in mm) at sites for given dates.
 Those sites have to be in metropolitan France (and Corsica) (if needed, minor changes will allow to use this script for European sites outside France).
 It uses the E-Obs meteorological data: https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php#datafiles
 
