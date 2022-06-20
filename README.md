@@ -6,6 +6,7 @@ This script extracts at sites in Europe for given dates:
 - raw mean temperature and mean anomaly (in °C)
 - or precipitations sum (in mm)
 - or mean wind speed (in m.s-1)
+
 It uses the E-Obs meteorological data: https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php#datafiles
 
 ### ExtractingWind_speed.R
