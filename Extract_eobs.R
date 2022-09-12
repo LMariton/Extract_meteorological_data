@@ -34,16 +34,12 @@
 # tableDaysSites : a table with (minimum):
 # -> a column named "Latitude" with the site latitude in WGS84
 # -> a column named "Longitude" with the site longitude in WGS84
-# -> a column with the sites unique IDs
 # -> a column named "Date" with the date of the survey for each sites
 #       Dates should be formatted this way : "2020-05-26" if characters
 #       They might also be c("POSIXct","POSIXt") objects
 #
 # nbrPreviousDays : number of previous days for which T° should be returned
 # (for example "3", to obtain the temperature for the survey date but for also the three previous days)
-#
-# metropolitan_France :if TRUE all sites considered are in metropolitan France (and Corsica), only the E-Obs 
-# data located in this zone are considered, if FALSE the whole dataset is considered
 #
 # verbose : if FALSE messages are suppressed
 
