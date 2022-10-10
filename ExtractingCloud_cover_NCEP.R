@@ -119,11 +119,11 @@ extract_CloudCover <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,
           which((point_cloud_cover_subset$date==tableNightsSites$Date[index])&(point_cloud_cover_subset$hour==18))]
         }
       
-      if(length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+days(1))&(point_cloud_cover_subset$hour==00)))>0){
+      if(length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+ddays(1))&(point_cloud_cover_subset$hour==00)))>0){
         tableNightsSites$cloud_cover_00[index] <- point_cloud_cover_subset$cloud_cover[
-          which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+days(1))&(point_cloud_cover_subset$hour==00))]
+          which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+ddays(1))&(point_cloud_cover_subset$hour==00))]
         }
-      if(length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+days(1))&(point_cloud_cover_subset$hour==06)))>0){
+      if(length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+ddays(1))&(point_cloud_cover_subset$hour==06)))>0){
         tableNightsSites$cloud_cover_06[index] <- point_cloud_cover_subset$cloud_cover[
           which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+days(1))&(point_cloud_cover_subset$hour==06))]
       }
@@ -133,25 +133,25 @@ extract_CloudCover <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,
         
         for (nbrNight in (1:nbrPreviousDays)){
           
-          if (length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-days(nbrNight))&(point_cloud_cover_subset$hour==18)))>0){
+          if (length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-ddays(nbrNight))&(point_cloud_cover_subset$hour==18)))>0){
             tableNightsSites[
               index,which(colnames(tableNightsSites)==paste0(
                 "cloud_cover_18_before",nbrNight))] <- point_cloud_cover_subset$cloud_cover[
-                  which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-days(nbrNight))&(point_cloud_cover_subset$hour==18))]
+                  which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-ddays(nbrNight))&(point_cloud_cover_subset$hour==18))]
           }
           
-          if (length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_cloud_cover_subset$hour==00)))>0){
+          if (length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_cloud_cover_subset$hour==00)))>0){
           tableNightsSites[
             index,which(colnames(tableNightsSites)==paste0(
               "cloud_cover_00_before",nbrNight))] <- point_cloud_cover_subset$cloud_cover[
-                which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_cloud_cover_subset$hour==00))]
+                which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_cloud_cover_subset$hour==00))]
           }
           
-          if (length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_cloud_cover_subset$hour==06)))>0){
+          if (length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_cloud_cover_subset$hour==06)))>0){
             tableNightsSites[
               index,which(colnames(tableNightsSites)==paste0(
                 "cloud_cover_06_before",nbrNight))] <- point_cloud_cover_subset$cloud_cover[
-                  which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_cloud_cover_subset$hour==06))]
+                  which((point_cloud_cover_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_cloud_cover_subset$hour==06))]
           }
         }
       }
