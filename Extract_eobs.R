@@ -161,11 +161,11 @@ extract_eobs <- function(path_to_meteo_nc,tableDaysSites,nbrPreviousDays,verbose
   # Creation of a new column in the shapefile with the sites that indicate, for each site, the closest point
   # of the meteo data
   
+  sites_SHP$corresp_EObs <- coord_meteo_SHP$coord[st_nearest_feature(sites_SHP,coord_meteo_SHP)]
+  
   if(verbose==T){ print("2. Link between sites and meteo points OK")}
   
   #### III. Daily value (and temperature anomaly) extraction for each night ####
-  
-  tableDaysSites$corresp_EObs <- as.data.frame(sites_SHP$corresp_EObs)
   
   tableDaysSites[,paste0(ncdf$var[[1]]$name,'_','day')] <- rep(NA,dim(tableDaysSites)[1])
   
