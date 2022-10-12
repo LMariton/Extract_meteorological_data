@@ -122,10 +122,10 @@ extract_eobs <- function(path_to_meteo_nc,tableDaysSites,nbrPreviousDays,verbose
   ####____A. Detect longitude * latitude for which data are available ####
     
   # Take one date not to recent (data has to exist) but not old either
-  # Here arbitrarily : 2019-05-15
+  # Here arbitrarily : 2021-05-15
   # And extract meteo data for each longitude * latitude at this date (array with 2 dimensions)
     
-  date_map = which(date=="2019-05-15")
+  date_map = which(date=="2021-05-15")
   
   meteo_link_array <- ncvar_get(ncdf,
                                 ncdf$var[[1]]$name,
@@ -161,8 +161,6 @@ extract_eobs <- function(path_to_meteo_nc,tableDaysSites,nbrPreviousDays,verbose
   # Creation of a new column in the shapefile with the sites that indicate, for each site, the closest point
   # of the meteo data
   
-  sites_SHP$corresp_EObs <- coord_meteo_SHP$coord[st_nearest_feature(sites_SHP,coord_meteo_SHP)]
-   
   if(verbose==T){ print("2. Link between sites and meteo points OK")}
   
   #### III. Daily value (and temperature anomaly) extraction for each night ####
