@@ -145,25 +145,25 @@ extract_WindSpeed <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,y
         
         for (nbrNight in (1:nbrPreviousDays)){
           
-          if (length(which((point_wind_subset$date==tableNightsSites$Date[index]-days(nbrNight))&(point_wind_subset$hour==18)))>0){
+          if (length(which((point_wind_subset$date==tableNightsSites$Date[index]-ddays(nbrNight))&(point_wind_subset$hour==18)))>0){
             tableNightsSites[
               index,which(colnames(tableNightsSites)==paste0(
                 "wind_night_18_before",nbrNight))] <- point_wind_subset$wind_ms[
-                  which((point_wind_subset$date==tableNightsSites$Date[index]-days(nbrNight))&(point_wind_subset$hour==18))]
+                  which((point_wind_subset$date==tableNightsSites$Date[index]-ddays(nbrNight))&(point_wind_subset$hour==18))]
           }
           
-          if (length(which((point_wind_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_wind_subset$hour==00)))>0){
+          if (length(which((point_wind_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_wind_subset$hour==00)))>0){
           tableNightsSites[
             index,which(colnames(tableNightsSites)==paste0(
               "wind_night_00_before",nbrNight))] <- point_wind_subset$wind_ms[
-                which((point_wind_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_wind_subset$hour==00))]
+                which((point_wind_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_wind_subset$hour==00))]
           }
           
-          if (length(which((point_wind_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_wind_subset$hour==06)))>0){
+          if (length(which((point_wind_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_wind_subset$hour==06)))>0){
             tableNightsSites[
               index,which(colnames(tableNightsSites)==paste0(
                 "wind_night_06_before",nbrNight))] <- point_wind_subset$wind_ms[
-                  which((point_wind_subset$date==tableNightsSites$Date[index]-days(nbrNight-1))&(point_wind_subset$hour==06))]
+                  which((point_wind_subset$date==tableNightsSites$Date[index]-ddays(nbrNight-1))&(point_wind_subset$hour==06))]
           }
         }
       }
