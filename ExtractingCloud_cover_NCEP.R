@@ -125,7 +125,7 @@ extract_CloudCover <- function(tableNightsSites,Col_ID,nbrPreviousDays,year_beg,
         }
       if(length(which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+ddays(1))&(point_cloud_cover_subset$hour==06)))>0){
         tableNightsSites$cloud_cover_06[index] <- point_cloud_cover_subset$cloud_cover[
-          which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+days(1))&(point_cloud_cover_subset$hour==06))]
+          which((point_cloud_cover_subset$date==tableNightsSites$Date[index]+ddays(1))&(point_cloud_cover_subset$hour==06))]
       }
       
       
