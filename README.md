@@ -28,7 +28,7 @@ They are extracted thanks to the package RNCEP (an internet connection is requir
 In theory, you don’t even need to open them with R, however I strongly advise you to do so to read the first lines presenting what the function does and how to use it (in particular what the arguments of the function are and how your dataset should be structured). 
 
 In your script, simply add the following command:
-*source(“pathToTheRFile”)*
+`source(“pathToTheRFile”)`
 Then you can use the function!
 
 Here is an example of what your script should look like: 
