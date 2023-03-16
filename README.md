@@ -38,5 +38,5 @@ Here is an example of what your script should look like:
 `nbr <- 2`
 
 `source("C:/Users/Name/Document/Extract_eobs.R")`  
-`surveysDataNew <- extract_eobs(path, surveysData,nbr)`
+`surveysDataNew <- extract_eobs(path,surveysData,nbr)`
 
