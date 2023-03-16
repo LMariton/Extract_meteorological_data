@@ -208,7 +208,7 @@ extract_eobs <- function(path_to_meteo_nc,tableDaysSites,nbrPreviousDays,verbose
       
       if (nbrPreviousDays!=0){
         for (i in (1:nbrPreviousDays)){
-          tableDaysSites[,paste0(ncdf$var[[1]]$name,'_','day_before',i)][index] <- meteo_array[coord_lon,coord_lat,as.character(date_day-ddays(i))]
+          tableDaysSites[,paste0(ncdf$var[[1]]$name,'_','day_before',i)][index] <- meteo_array[coord_lon,coord_lat,as.character(date_day-days(i))]
         }
       }
       
