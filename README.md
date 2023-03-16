@@ -21,8 +21,9 @@ Those sites have to be in metropolitan France (and Corsica) (if needed, minor ch
 /!\ The data used have a low spatial resolution (2°) but a high temporal one (every 6 hours).
 They are extracted thanks to the package RNCEP (an internet connection is required), data come from from the NOAA data base.
 
-**Warning:
-These scripts are « functions », to use them you have to download them and keep the R. files somewhere on your computer.**  
+
+####Warning:
+**These scripts are « functions », to use them you have to download them and keep the R. files somewhere on your computer.**  
 
 In theory, you don’t even need to open them with R, however I strongly advise you to do so to read the first lines presenting what the function does and how to use it (in particular what the arguments of the function are and how your dataset should be structured). 
 
@@ -32,11 +33,11 @@ Then you can use the function!
 
 Here is an example of what your script should look like: 
 
-*path <- "D:/Data/Data_meteo/tg_ens_mean_0.1deg_reg_v23.1e.nc"
-surveysData <- read.csv("C:/Users/Name/Desktop/Surveys.csv")
-nbr <- 2*
+*path <- "D:/Data/Data_meteo/tg_ens_mean_0.1deg_reg_v23.1e.nc"*
+*surveysData <- read.csv("C:/Users/Name/Desktop/Surveys.csv")*
+*nbr <- 2*
 
-source("C:/Users/Name/Document/Extract_eobs.R")
+*source("C:/Users/Name/Document/Extract_eobs.R")*
 
-surveysDataNew <- extract_eobs(path, surveysData,nbr)
+*surveysDataNew <- extract_eobs(path, surveysData,nbr)*
 
